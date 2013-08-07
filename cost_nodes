@@ -1,0 +1,28 @@
+#import binvox_rw as bv
+#import scipy.ndimage as sn
+#import sys
+#from matplotlib import pyplot as plt
+#from matplotlib import cm as cm
+#import numpy
+  
+  
+# numpy.set_printoptions(threshold=sys.maxint)
+  
+with open('/home/diablo/Desktop/Ongoing Thesis/4_cubic_obstacles.binvox' ,'rw') as f:
+    model = bv.read_as_3d_array(f)
+  
+def nodes():
+    nodes = []
+  
+    cost_node = 1
+    cost_obstacle = inf
+      
+    for j in range(len(model.data)):
+        row = []
+        for i in range(len(model.data[i])):
+            if model.data[j][i] == False:
+            row.append(cost_node)
+        else
+            row.append(cost_obstacle)
+        nodes.append(row)
+    return nodes
